@@ -16,15 +16,15 @@ import Footer from '../components/Footer.vue'
     <Navbar />
     <HeroSection />
     <Testemonial
-      title="Lead Magnet Activated"
-      msg="My website was pretty, but it wasn't converting visitors. WebKarer optimized it for lead capture, and now my sales funnel is overflowing!"
-      name="Peter"
+      :title="$t('testimonials.leadMagnet.title')"
+      :msg="$t('testimonials.leadMagnet.message')"
+      :name="$t('testimonials.leadMagnet.name')"
     />
     <ProblemSolving />
     <Testemonial
-      title="Growth on Autopilot"
-      msg="This team built a website that gets results! My business has seen a surge in new customers."
-      name="Thomas"
+      :title="$t('testimonials.growth.title')"
+      :msg="$t('testimonials.growth.message')"
+      :name="$t('testimonials.growth.name')"
     />
     <div id="how-mobile" style="height: 0; position: relative; top: -60px"></div>
     <HowItWorks id="how" />

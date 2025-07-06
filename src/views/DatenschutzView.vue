@@ -10,73 +10,73 @@ import Footer from '../components/Footer.vue'
       <div class="container">
         <h1>Datenschutzerklärung</h1>
         <section>
-          <h2>1. Datenschutz auf einen Blick</h2>
-
-          <h3>Allgemeine Hinweise</h3>
-          <p>
-            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
-            personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene
-            Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-          </p>
-
-          <h3>Datenerfassung auf dieser Website</h3>
-          <p>
-            <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
-            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen
-            Kontaktdaten können Sie dem Abschnitt "Hinweis zur Verantwortlichen Stelle" in dieser
-            Datenschutzerklärung entnehmen.
-          </p>
-
-          <h3>Wie erfassen wir Ihre Daten?</h3>
-          <p>
-            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann
-            es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
-          </p>
-          <p>
-            Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website
-            durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B.
-            Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
-          </p>
-
-          <h3>Wofür nutzen wir Ihre Daten?</h3>
-          <p>
-            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
-            gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
-          </p>
-
-          <h3>Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
-          <p>
-            Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck
-            Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht,
-            die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur
-            Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft
-            widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung
-            der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-          </p>
-        </section>
-
-        <section>
-          <h2>2. Hosting</h2>
-          <p>Wir hosten unsere Website bei [Name des Hosting-Providers].</p>
-        </section>
-
-        <section>
-          <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
-
-          <h3>Datenschutz</h3>
-          <p>
-            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir
-            behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
-            Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-          </p>
-
-          <h3>SSL- bzw. TLS-Verschlüsselung</h3>
-          <p>
-            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
-            Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
-            daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an
-            dem Schloss-Symbol in Ihrer Browserzeile.
-          </p>
+          In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der
+          Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene
+          Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung,
+          Telekommunikationsgesetz 2003).<br />Sobald Sie als Benutzer auf unsere Webseite zugreifen
+          oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung
+          erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6
+          Abs 1 lit f DSGVO.<br /><br /><strong>Kontakt mit uns<br />‍</strong>Wenn Sie uns,
+          entweder über unser Kontaktformular auf unserer Webseite, oder per Email
+          kontaktieren,&nbsp;dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung
+          Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns
+          gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten
+          Daten.<br />‍<br /><strong>Cookies</strong><br />Unsere Website verwendet so genannte
+          Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem
+          Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser
+          Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät
+          gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten
+          Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so
+          einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im
+          Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer
+          Website eingeschränkt sein.<br />‍<br /><strong>Google Fonts</strong><br />Unsere Website
+          verwendet Schriftarten von „Google Fonts“. <br />Der Dienstanbieter dieser Funktion ist:
+          <br />
+          &nbsp;&nbsp;&nbsp;Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland
+          <br />
+          &nbsp;&nbsp;&nbsp;Tel: +353 1 543 1000<br />Beim Aufrufen dieser Webseite lädt Ihr Browser
+          Schriftarten und speichert&nbsp;diese in den Cache. Da Sie, als Besucher der Webseite,
+          Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner
+          setzen oder analysieren.<br />‍<br />Die Nutzung von „Google-Fonts“ dient der Optimierung
+          unserer Dienstleistung&nbsp;und der einheitlichen Darstellung von Inhalten. Dies stellt
+          ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.<br />‍<br />Weitere
+          Informationen zu Google Fonts erhalten Sie unter folgendem Link:
+          <a href="https://developers.google.com/fonts/faq"
+            ><br />https://developers.google.com/fonts/faq<br />‍</a
+          >Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der
+          Datenschutzerklärung entnehmen:
+          <a href="https://policies.google.com/privacy?hl=de"
+            >https://policies.google.com/privacy?hl=de<br />‍</a
+          >Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield
+          unterworfen.<br />‍<a href="https://www.privacyshield.gov/EU-US-Framework"
+            >https://www.privacyshield.gov/EU-US-Framework<br /><br />‍</a
+          ><strong>Server-Log Files</strong><br />Diese Webseite und der damit verbundene Provider
+          erhebt im Zuge der Webseitennutzung automatisch Informationen im Rahmen sogenannter
+          „Server-Log Files“. <br />Dies betrifft insbesondere:<br />&nbsp;&nbsp;&nbsp;&nbsp;IP-Adresse
+          oder Hostname<br />&nbsp;&nbsp;&nbsp;&nbsp;den verwendeten Browser<br />&nbsp;&nbsp;&nbsp;&nbsp;Aufenthaltsdauer
+          auf der Webseite sowie Datum und Uhrzeit<br />&nbsp;&nbsp;&nbsp;&nbsp;aufgerufene Seiten
+          der Webseite<br />&nbsp;&nbsp;&nbsp;&nbsp;Spracheinstellungen und Betriebssystem<br />&nbsp;&nbsp;&nbsp;&nbsp;„Leaving-Page“
+          (auf welcher URL hat der Benutzer die Webseite verlassen)<br />&nbsp;&nbsp;&nbsp;&nbsp;ISP
+          (Internet Service Provider)<br />Diese erhobenen Informationen werden nicht
+          personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />Der Webseitenbetreiber behält es sich vor,
+          im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu
+          überprüfen. &nbsp; <br /><br /><strong>Ihre Rechte als Betroffener</strong><br />Sie als
+          Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein
+          Recht auf:<br />&nbsp;&nbsp;&nbsp;&nbsp;Auskunft<br />&nbsp;&nbsp;&nbsp;&nbsp;Löschung der
+          Daten<br />&nbsp;&nbsp;&nbsp;&nbsp;Berichtigung der Daten<br />&nbsp;&nbsp;&nbsp;&nbsp;Übertragbarkeit
+          der Daten<br />&nbsp;&nbsp;&nbsp;&nbsp;Wiederruf und Widerspruch zur Datenverarbeitung<br />&nbsp;&nbsp;&nbsp;&nbsp;Einschränkung<br /><br />Wenn
+          sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das
+          Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns
+          (lukas@karer.tech) oder der Datenschutzbehörde zu beschweren.<br /><br />Sie erreichen uns
+          unter folgenden Kontaktdaten:<strong><br /><br />Webseitenbetreiber:</strong> Lukas
+          Karer<br /><strong>Telefonnummer:</strong> +4368118409967<br /><strong>Email:</strong>
+          lukas@karer.tech<br />‍<br />Quelle:
+          <a href="https://www.rechtstexte-generator.at/dsgvo-generator-oesterreich/"
+            ><strong>Datenschutz DSGVO Generator</strong></a
+          >
+          in Kooperation mit
+          <a href="https://www.ortner-rechtsanwalt.at/"><strong>Rechtsanwalt Wien</strong></a>
         </section>
       </div>
     </main>
@@ -93,7 +93,7 @@ import Footer from '../components/Footer.vue'
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
   padding: 2rem;
   background-color: $bg-secondary;
   border-radius: 1rem;
@@ -108,27 +108,10 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  color: $color-secondary;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  color: $text-primary;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
 strong {
-  color: $color-secondary;
+  color: $text-primary;
+  line-height: 1.5rem;
+  font-weight: bold;
 }
 
 section {

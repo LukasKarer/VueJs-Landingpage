@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Frequently asked questions</h2>
+    <h2>{{ $t('faq.title') }}</h2>
     <div class="faqblock">
       <span
         class="question"
@@ -10,9 +10,9 @@
       >
         <div>
           <IconPlus class="img" />
-          <span class="text">{{ question.text }}</span>
+          <span class="text">{{ $t(question.text) }}</span>
         </div>
-        <span class="answer">{{ question.answer }}</span>
+        <span class="answer">{{ $t(question.answer) }}</span>
       </span>
     </div>
   </div>
@@ -25,31 +25,31 @@ import { ref } from 'vue'
 export default {
   setup() {
     const questions = ref([
-      { id: 1, text: 'A single simple question', answer: 'A single simple answer' },
-      { id: 2, text: 'A single simple question', answer: 'A single simple answer' },
-      { id: 3, text: 'A single simple question', answer: 'A single simple answer' },
-      { id: 4, text: 'A single simple question', answer: 'A single simple answer' },
-      { id: 5, text: 'A single simple question', answer: 'A single simple answer' }
+      { id: 1, text: 'faq.questions.0.text', answer: 'faq.questions.0.answer' },
+      { id: 2, text: 'faq.questions.1.text', answer: 'faq.questions.1.answer' },
+      { id: 3, text: 'faq.questions.2.text', answer: 'faq.questions.2.answer' },
+      { id: 4, text: 'faq.questions.3.text', answer: 'faq.questions.3.answer' },
+      { id: 5, text: 'faq.questions.4.text', answer: 'faq.questions.4.answer' }
     ])
 
     const toggleQuestion = (question) => {
       console.log(question)
-      const icon = question.querySelector('.img') 
-      const answer = question.querySelector('.answer') 
+      const icon = question.querySelector('.img')
+      const answer = question.querySelector('.answer')
 
       if (answer.classList.contains('active')) {
-        answer.classList.add('remove') 
-        icon.classList.add('remove') 
+        answer.classList.add('remove')
+        icon.classList.add('remove')
         setTimeout(() => {
-          answer.classList.remove('remove') 
-          answer.classList.remove('active') 
-          icon.classList.remove('remove') 
-          icon.classList.remove('rotated') 
+          answer.classList.remove('remove')
+          answer.classList.remove('active')
+          icon.classList.remove('remove')
+          icon.classList.remove('rotated')
         }, 500)
       } else {
         answer.classList.add('active')
         icon.classList.add('rotated')
-      } 
+      }
     }
 
     return {
@@ -153,10 +153,6 @@ div.container {
       }
     }
   }
-}
-
-span {
-  
 }
 
 @keyframes fadeIn {

@@ -13,8 +13,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^6.0.8",
     "volar-service-vetur": "^0.0.45",
     "vue": "^3.4.21",
+    "vue-i18n": "^11.1.9",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

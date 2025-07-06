@@ -7,28 +7,40 @@
       <div class="footer-right">
         <nav>
           <ul>
-            <li><a href="#how" class="footer-link" @click="handleClick($event, 'how')">How</a></li>
+            <li>
+              <a href="#how" class="footer-link" @click="handleClick($event, 'how')">{{
+                $t('nav.how')
+              }}</a>
+            </li>
             <!-- <li><a href="#work" class="footer-link" @click="handleClick($event, 'work')">Work</a></li> -->
             <li>
-              <a href="#packages" class="footer-link" @click="handleClick($event, 'packages')"
-                >Price</a
-              >
+              <a href="#packages" class="footer-link" @click="handleClick($event, 'packages')">{{
+                $t('nav.price')
+              }}</a>
             </li>
             <li>
-              <a href="#contact" class="footer-link" @click="handleClick($event, 'contact')"
-                >Contact</a
-              >
+              <a href="#contact" class="footer-link" @click="handleClick($event, 'contact')">{{
+                $t('nav.contact')
+              }}</a>
             </li>
-            <li><a href="#faq" class="footer-link" @click="handleClick($event, 'faq')">FAQ</a></li>
+            <li>
+              <a href="#faq" class="footer-link" @click="handleClick($event, 'faq')">{{
+                $t('nav.faq')
+              }}</a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
     <hr class="footer-divider" />
     <div class="footer-bottom">
-      <span>© 2025 WebKarer. All rights reserved.</span>
-      <RouterLink to="/impressum" class="footer-bottom-link">Impressum</RouterLink>
-      <RouterLink to="/datenschutz" class="footer-bottom-link">Datenschutz</RouterLink>
+      <span>{{ $t('footer.copyright') }}</span>
+      <RouterLink to="/impressum" class="footer-bottom-link">{{
+        $t('footer.impressum')
+      }}</RouterLink>
+      <RouterLink to="/datenschutz" class="footer-bottom-link">{{
+        $t('footer.datenschutz')
+      }}</RouterLink>
     </div>
   </footer>
 </template>

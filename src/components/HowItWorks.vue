@@ -1,46 +1,43 @@
 <template>
   <div>
     <span class="title">
-      <p class="strong">How It Works</p>
+      <p class="strong">{{ $t('howItWorks.title') }}</p>
       <p>
-        We're your one-stop shop for high-impact websites, gorgeous brand design and reliable
-        hosting. Attract more clients, elevate your brand, and scale your business!
+        {{ $t('howItWorks.subtitle') }}
       </p>
     </span>
     <span class="row">
       <div>
         <IconChat class="img" />
         <span>
-          At WebKarer we kickoff our project with a strategy meeting, where a outline of the project
-          will be written down, containing integral, unique parts that the endproduct will feature
+          {{ $t('howItWorks.step1.description') }}
         </span>
       </div>
       <div>
         <IconSparkles class="img" />
         <span>
-          With all outlines setup for straightup success, we use all your integral, unique parts to
-          craft a website that will become the brigthest star in an starlit sky of websites
+          {{ $t('howItWorks.step2.description') }}
         </span>
       </div>
       <div>
         <IconRocket class="img" />
         <span>
-          After some possible rounds of revisions, the only thing left to do is to take your
-          endproduct to the launchpad and shoot it into a world full of eagerly waiting customers
+          {{ $t('howItWorks.step3.description') }}
         </span>
       </div>
     </span>
-    <a href="#packages" class="button-primary">See Packages</a>
+    <a href="#packages" class="button-primary" @click="handleClick($event, 'packages')">{{ $t('howItWorks.seePackages') }}</a>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import IconChat from './icons/IconChat.svg'
 import IconSparkles from './icons/IconSparkles.svg'
 import IconRocket from './icons/IconRocket.svg'
+import { handleAnchorClick } from '../utils/scrollUtils'
 
-export default {
-  components: { IconChat, IconSparkles, IconRocket }
+const handleClick = (event: Event, targetId: string) => {
+  handleAnchorClick(event, targetId)
 }
 </script>
 

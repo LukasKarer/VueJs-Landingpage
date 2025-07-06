@@ -1,12 +1,9 @@
 <template>
   <div>
     <span>
-      <h2>We know the value of your work, it's time your customers do so too</h2>
+      <h2>{{ $t("problemSolving.title") }}</h2>
       <p>
-        You put your heart and soul into your business. But hard work can only get you so far and a
-        poor brand presence will have you working overtime and not seeing results. <br /><br />
-        So it's time to set yourself apart as the industry leader you've become with a kick-ass
-        brand your customers genuinely love and a website that works as hard as you do.
+        {{ $t("problemSolving.subtitle") }}
       </p>
     </span>
     <IconWebsiteHolder class="svg" />

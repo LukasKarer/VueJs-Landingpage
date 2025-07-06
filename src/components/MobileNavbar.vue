@@ -21,22 +21,31 @@
           </button>
         </div>
         <ul class="mobile-menu-items">
-          <li><a href="#how" class="mobile-link" @click="handleClick($event, 'how')">How</a></li>
           <li>
-            <a href="#packages" class="mobile-link" @click="handleClick($event, 'packages')"
-              >Price</a
-            >
+            <a href="#how" class="mobile-link" @click="handleClick($event, 'how')">{{
+              $t('nav.how')
+            }}</a>
           </li>
           <li>
-            <a href="#contact" class="mobile-link" @click="handleClick($event, 'contact')"
-              >Contact</a
-            >
+            <a href="#packages" class="mobile-link" @click="handleClick($event, 'packages')">{{
+              $t('nav.price')
+            }}</a>
           </li>
-          <li><a href="#faq" class="mobile-link" @click="handleClick($event, 'faq')">FAQ</a></li>
+          <li>
+            <a href="#contact" class="mobile-link" @click="handleClick($event, 'contact')">{{
+              $t('nav.contact')
+            }}</a>
+          </li>
+          <li>
+            <a href="#faq" class="mobile-link" @click="handleClick($event, 'faq')">{{
+              $t('nav.faq')
+            }}</a>
+          </li>
         </ul>
         <div class="mobile-menu-footer">
+          <LanguageSwitcher />
           <a href="#contact" class="mobile-button-primary" @click="handleClick($event, 'contact')">
-            Get Started
+            {{ $t('nav.getStarted') }}
           </a>
         </div>
       </div>
@@ -47,6 +56,7 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
 import { handleAnchorClick } from '../utils/scrollUtils'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
 const isMenuOpen = ref(false)
 
@@ -179,7 +189,6 @@ const handleClick = async (event: Event, targetId: string) => {
   background-color: $bg-secondary;
   height: calc(100vh - 2rem);
   width: calc(100vw - 2rem);
-  max-width: 400px;
   border-radius: 1rem;
   padding: 1rem 2rem;
   display: flex;
@@ -261,8 +270,9 @@ const handleClick = async (event: Event, targetId: string) => {
 
 .mobile-menu-footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding-top: 1rem;
 }
 
 .mobile-button-primary {

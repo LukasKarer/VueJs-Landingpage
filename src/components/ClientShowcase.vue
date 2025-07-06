@@ -1,27 +1,25 @@
 <template>
   <div class="container">
     <span>
-      <p class="strong">Client Showcase</p>
-      <p>A few examples of what we are able to do</p>
+      <p class="strong">{{ $t('clientShowcase.title') }}</p>
+      <p>{{ $t('clientShowcase.subtitle') }}</p>
     </span>
     <div class="grid">
       <div class="grid-item grid-item-1">
-        <strong>The Brief</strong>
+        <strong>{{ $t('clientShowcase.brief') }}</strong>
         <IconWebsiteHolder class="img" />
         <p>
-          Our client wanted a website that would showcase their products and services in a way that
-          would appeal to their target audience.
+          {{ $t('clientShowcase.description') }}
         </p>
       </div>
       <div class="grid-item grid-item-2"></div>
       <div class="grid-item grid-item-3"></div>
       <div class="grid-item grid-item-4"></div>
       <div class="grid-item grid-item-5">
-        <strong>The Brief</strong>
+        <strong>{{ $t("clientShowcase.brief") }}</strong>
         <IconWebsiteHolder class="img" />
         <p>
-          Our client wanted a website that would showcase their products and services in a way that
-          would appeal to their target audience.
+          {{ $t("clientShowcase.description") }}
         </p>
       </div>
       <div class="grid-item grid-item-6"></div>

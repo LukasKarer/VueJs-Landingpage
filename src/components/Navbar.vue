@@ -8,22 +8,33 @@
     <span class="big">
       <div>
         <ul>
-          <li><a href="#how" class="link" @click="handleClick($event, 'how')" exact>How</a></li>
+          <li>
+            <a href="#how" class="link" @click="handleClick($event, 'how')" exact>{{
+              $t('nav.how')
+            }}</a>
+          </li>
           <!-- <li><a href="#work" class="link" @click="handleClick($event, 'work')">Work</a></li> -->
           <li>
-            <a href="#packages" class="link" @click="handleClick($event, 'packages')">Price</a>
+            <a href="#packages" class="link" @click="handleClick($event, 'packages')">{{
+              $t('nav.price')
+            }}</a>
           </li>
           <li>
-            <a href="#contact" class="link" @click="handleClick($event, 'contact')">Contact</a>
+            <a href="#contact" class="link" @click="handleClick($event, 'contact')">{{
+              $t('nav.contact')
+            }}</a>
           </li>
-          <li><a href="#faq" class="link" @click="handleClick($event, 'faq')">FAQ</a></li>
+          <li>
+            <a href="#faq" class="link" @click="handleClick($event, 'faq')">{{ $t('nav.faq') }}</a>
+          </li>
         </ul>
       </div>
     </span>
     <span class="right">
-      <a href="#contact" class="button-primary" @click="handleClick($event, 'contact')"
-        >Get Started</a
-      >
+      <LanguageSwitcher />
+      <a href="#contact" class="button-primary" @click="handleClick($event, 'contact')">{{
+        $t('nav.getStarted')
+      }}</a>
     </span>
   </nav>
 
@@ -34,6 +45,7 @@
 <script setup lang="ts">
 import { handleAnchorClick } from '../utils/scrollUtils'
 import MobileNavbar from './MobileNavbar.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
 const handleClick = (event: Event, targetId: string) => {
   handleAnchorClick(event, targetId)
@@ -117,6 +129,12 @@ span.big {
 // Hide desktop navbar on mobile screens
 @media (max-width: 900px) {
   .desktop-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .button-primary {
     display: none;
   }
 }

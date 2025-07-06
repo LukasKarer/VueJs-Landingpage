@@ -1,70 +1,82 @@
 <template>
   <div>
     <span>
-      <p class="strong">Get In Touch</p>
+      <p class="strong">{{ $t('contact.title') }}</p>
       <p>
-        Ready to transform your online presence? Let's discuss your project and create something
-        amazing together. Drop us a message and we'll get back to you within 24 hours!
+        {{ $t('contact.subtitle') }}
       </p>
     </span>
     <form class="contact-form">
       <div class="form-row">
         <div class="form-group">
-          <label for="name">Full Name or Company</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
+          <label for="name">{{ $t('contact.form.name') }}</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email@example.com"
+            type="text"
+            id="name"
+            name="name"
+            :placeholder="$t('contact.form.namePlaceholder')"
             required
           />
         </div>
         <div class="form-group">
-          <label for="phone">Phone Number (optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="+43 660 1234567" />
+          <label for="email">{{ $t('contact.form.email') }}</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            :placeholder="$t('contact.form.emailPlaceholder')"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">{{ $t('contact.form.phone') }}</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            :placeholder="$t('contact.form.phonePlaceholder')"
+          />
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="service">Service Interest</label>
+          <label for="service">{{ $t('contact.form.service') }}</label>
           <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option value="Website">Website Development</option>
-            <option value="Branding">Brand Design</option>
-            <option value="Hosting">Web Hosting</option>
-            <option value="Consultation">Consultation</option>
-            <option value="Other">Other</option>
+            <option value="">{{ $t('contact.form.servicePlaceholder') }}</option>
+            <option value="Website">{{ $t('contact.form.services.website') }}</option>
+            <option value="Branding">{{ $t('contact.form.services.branding') }}</option>
+            <option value="Hosting">{{ $t('contact.form.services.hosting') }}</option>
+            <option value="Consultation">{{ $t('contact.form.services.consultation') }}</option>
+            <option value="Other">{{ $t('contact.form.services.other') }}</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="budget">Budget Range</label>
+          <label for="budget">{{ $t('contact.form.budget') }}</label>
           <select id="budget" name="budget">
-            <option value="">Select budget range</option>
-            <option value="under-1000">Under €1000</option>
-            <option value="1000-3000">€1000 - €3000</option>
-            <option value="3000-5000">€3000 - €5000</option>
-            <option value="5000-10000">€5000 - €10000</option>
-            <option value="over-10000">Over €10000</option>
+            <option value="">{{ $t('contact.form.budgetPlaceholder') }}</option>
+            <option value="under-1000">{{ $t('contact.form.budgets.under1000') }}</option>
+            <option value="1000-3000">{{ $t("contact.form.budgets['1000-3000']") }}</option>
+            <option value="3000-5000">{{ $t("contact.form.budgets['3000-5000']") }}</option>
+            <option value="5000-10000">{{ $t("contact.form.budgets['5000-10000']") }}</option>
+            <option value="over-10000">{{ $t('contact.form.budgets.over10000') }}</option>
           </select>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="message">Project Details</label>
+          <label for="message">{{ $t('contact.form.message') }}</label>
           <textarea
             id="message"
             name="message"
             rows="5"
-            placeholder="Tell us briefly about your project and goals, any specific requirements can be discussed afterwards..."
+            :placeholder="$t('contact.form.messagePlaceholder')"
             required
           ></textarea>
         </div>
       </div>
-      <button type="button" class="button-primary" @click="sendEmail">Send Message</button>
+      <button type="button" class="button-primary" @click="sendEmail">
+        {{ $t('contact.form.sendMessage') }}
+      </button>
     </form>
   </div>
 </template>
@@ -96,27 +108,24 @@ export default {
 
       // Validate required fields
       if (!name || !email || !service || !message) {
-        alert(
-          'Please fill in all required fields (Name, Email, Service Interest, and Project Details)'
-        )
+        alert(this.$t('contact.validation.requiredFields'))
         return
       }
 
       // Create email template
-      const subject = `New Project Inquiry - ${service}`
+      const subject = this.$t('contact.email.subject', { service })
       const body =
-        `Hello WebKarer Team,<br />` +
-        `I'm interested in your services and would like to discuss a project.<br /><br />` +
-        `Contact Information:<br />` +
-        `- Name: ${name}<br />` +
-        `- Email: ${email}<br />` +
-        `- Phone: ${phone || 'Not provided'}<br /><br />` +
-        `Project Details:<br />` +
-        `- Service Interest: ${service}<br />` +
-        `- Budget Range: ${budget + '€' || 'Not specified'}<br />` +
-        `- Project Description: ${message}<br /><br />` +
-        `I look forward to hearing from you!<br />` +
-        `Best regards,<br />${name}`
+        `${this.$t('contact.email.greeting')}<br />` +
+        `${this.$t('contact.email.interest')}<br /><br />` +
+        `${this.$t('contact.email.contactInfo')}<br />` +
+        `- ${this.$t('contact.form.name')}: ${name}<br />` +
+        `- ${this.$t('contact.form.email')}: ${email}<br />` +
+        `- ${this.$t('contact.form.phone')}: ${phone || this.$t('contact.email.notProvided')}<br /><br />` +
+        `${this.$t('contact.email.projectDetails')}<br />` +
+        `- ${this.$t('contact.email.serviceInterest')}: ${service}<br />` +
+        `- ${this.$t('contact.email.budgetRange')}: ${budget ? budget + '€' : this.$t('contact.email.notSpecified')}<br />` +
+        `- ${this.$t('contact.email.projectDescription')}: ${message}<br /><br />` +
+        `${this.$t('contact.email.bestRegards')}<br />${name}`
 
       // Create mailto link
       const mailtoLink = `mailto:inquiry@karer.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
@@ -234,8 +243,6 @@ div {
   .button-primary {
     margin: 2rem auto 1rem !important;
     display: block;
-    width: 100%;
-    max-width: 200px;
     padding: 1rem 2rem;
     background-color: $bg-tertiary;
     color: $text-primary;

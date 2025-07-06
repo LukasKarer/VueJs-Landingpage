@@ -1,51 +1,61 @@
 <template>
   <div class="container">
     <div>
-      <p class="strong">Packages</p>
+      <p class="strong">{{ $t('packages.title') }}</p>
       <p>
-        A few examples of services we are providing. <br />
-        Custom requests always possible via email and call!
+        {{ $t('packages.subtitle') }}
       </p>
     </div>
     <span class="row">
       <span>
-        <text>Starting at</text> <br />
-        <strong>500</strong><text>EUR</text> <br />
-        <p><IconCheck class="check" />5 high-converting pages</p>
-        <p><IconCheck class="check" />Basic brand design</p>
-        <p><IconCheck class="check" />Website usage training</p>
-        <p><IconCheck class="check" />Post launch support</p>
-        <router-link to="#" class="button-primary">Get Started</router-link>
-        <a href="#" class="bookacall">Book a call</a>
+        <text>{{ $t('packages.startingAt') }}</text> <br />
+        <strong>{{ $t('packages.basic.price') }}</strong
+        ><text>{{ $t('packages.eur') }}</text> <br />
+        <p><IconCheck class="check" />{{ $t('packages.basic.features.0') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.basic.features.1') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.basic.features.2') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.basic.features.3') }}</p>
+        <a href="#contact" class="button-primary" @click="handleClick($event, 'contact')">{{
+          $t('packages.getStarted')
+        }}</a>
+        <a href="mailto:inquiry@karer.tech" class="bookacall">{{ $t('packages.bookCall') }}</a>
       </span>
       <span class="center">
-        <text>Starting at</text> <br />
-        <strong>5000</strong><text>EUR</text> <br />
-        <p><IconCheck class="check" />Custom interactive webapp</p>
-        <p><IconCheck class="check" />Custom copywriting</p>
-        <p><IconCheck class="check" />Templates & checklists</p>
-        <p><IconCheck class="check" />Advanced brand design</p>
-        <router-link to="#" class="button-primary">Get Started</router-link>
-        <a href="#" class="bookacall">Book a call</a>
+        <text>{{ $t('packages.startingAt') }}</text> <br />
+        <strong>{{ $t('packages.premium.price') }}</strong
+        ><text>{{ $t('packages.eur') }}</text> <br />
+        <p><IconCheck class="check" />{{ $t('packages.premium.features.0') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.premium.features.1') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.premium.features.2') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.premium.features.3') }}</p>
+        <a href="#contact" class="button-primary" @click="handleClick($event, 'contact')">{{
+          $t('packages.getStarted')
+        }}</a>
+        <a href="mailto:inquiry@karer.tech" class="bookacall">{{ $t('packages.bookCall') }}</a>
       </span>
       <span>
-        <text>Starting at</text> <br />
-        <strong>50</strong><text>EUR/month</text> <br />
-        <p><IconCheck class="check" />Reliable & secure hosting</p>
-        <p><IconCheck class="check" />Ongoing maintenance</p>
-        <p><IconCheck class="check" />Basic SEO optimization</p>
-        <p><IconCheck class="check" />Analytics (work in progress)</p>
-        <router-link to="#" class="button-primary">Get Started</router-link>
-        <a href="#" class="bookacall">Book a call</a>
+        <text>{{ $t('packages.startingAt') }}</text> <br />
+        <strong>{{ $t('packages.hosting.price') }}</strong
+        ><text>{{ $t('packages.eurPerMonth') }}</text> <br />
+        <p><IconCheck class="check" />{{ $t('packages.hosting.features.0') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.hosting.features.1') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.hosting.features.2') }}</p>
+        <p><IconCheck class="check" />{{ $t('packages.hosting.features.3') }}</p>
+        <a href="#contact" class="button-primary" @click="handleClick($event, 'contact')">{{
+          $t('packages.getStarted')
+        }}</a>
+        <a href="mailto:inquiry@karer.tech" class="bookacall">{{ $t('packages.bookCall') }}</a>
       </span>
     </span>
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import IconCheck from './icons/IconCheck.svg'
-export default {
-  components: { IconCheck }
+import { handleAnchorClick } from '../utils/scrollUtils'
+
+const handleClick = (event: Event, targetId: string) => {
+  handleAnchorClick(event, targetId)
 }
 </script>
 
@@ -57,7 +67,7 @@ div.container {
   flex-direction: column;
   font-family: $font-family;
   margin: 1rem;
-  border-radius: 1rem;  
+  border-radius: 1rem;
 
   div {
     margin: 2rem auto 0 auto;
