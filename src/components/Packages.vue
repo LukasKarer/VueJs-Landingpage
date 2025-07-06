@@ -10,7 +10,7 @@
     <span class="row">
       <span>
         <text>Starting at</text> <br />
-        <strong>1000</strong><text>EUR</text> <br />
+        <strong>500</strong><text>EUR</text> <br />
         <p><IconCheck class="check" />5 high-converting pages</p>
         <p><IconCheck class="check" />Basic brand design</p>
         <p><IconCheck class="check" />Website usage training</p>
@@ -30,8 +30,8 @@
       </span>
       <span>
         <text>Starting at</text> <br />
-        <strong>250</strong><text>EUR/month</text> <br />
-        <p><IconCheck class="check" />Reliable & secure webhosting</p>
+        <strong>50</strong><text>EUR/month</text> <br />
+        <p><IconCheck class="check" />Reliable & secure hosting</p>
         <p><IconCheck class="check" />Ongoing maintenance</p>
         <p><IconCheck class="check" />Basic SEO optimization</p>
         <p><IconCheck class="check" />Analytics (work in progress)</p>
@@ -57,7 +57,7 @@ div.container {
   flex-direction: column;
   font-family: $font-family;
   margin: 1rem;
-  border-radius: 1rem;
+  border-radius: 1rem;  
 
   div {
     margin: 2rem auto 0 auto;
@@ -68,6 +68,10 @@ div.container {
       color: $text-secondary;
       width: 60vw;
       margin-bottom: 1rem;
+
+      @media (max-width: 900px) {
+        width: 80vw;
+      }
     }
     p.strong {
       text-align: center;
@@ -82,12 +86,20 @@ div.container {
     flex-direction: row;
     margin: 1rem;
 
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+
     span {
       background-color: $bg-primary;
       width: 20vw;
       margin: 0.5rem;
       border-radius: 1rem;
       padding: 2rem;
+
+      @media (max-width: 1200px) {
+        width: 80vw;
+      }
 
       /* p {
         font-size: 1rem;
@@ -123,7 +135,9 @@ div.container {
         line-height: 2rem;
       }
       &:first-child {
-        margin-left: 0;
+        @media (min-width: 1201px) {
+          margin-left: 0;
+        }
       }
       &:last-child {
         margin-right: 0;

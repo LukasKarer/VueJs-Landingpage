@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>
+    <span class="title">
       <p class="strong">How It Works</p>
       <p>
         We're your one-stop shop for high-impact websites, gorgeous brand design and reliable
@@ -56,8 +56,8 @@ div {
   border-radius: 1rem;
   text-align: center;
 
-  span {
-    margin: 3rem auto;
+  span.title {
+    margin: 3rem auto 1.5rem auto;
 
     p {
       font-size: 1.25rem;
@@ -76,7 +76,13 @@ div {
     place-items: center;
     justify-content: center;
     flex-direction: row;
-    margin: 1rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
 
     div {
       display: flex;
@@ -86,19 +92,40 @@ div {
       width: 20vw;
       margin: 1rem 2.5vw;
 
+      @media (max-width: 1200px) {
+        width: 80vw;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem;
+      }
+
       .img {
         width: 3rem;
         height: 3rem;
+        margin-bottom: 1rem;
+
+        @media (max-width: 1200px) {
+          margin: 0 1rem 0 0;
+        }
       }
       span {
         font-size: 1rem;
         color: $text-primary;
+        @media (max-width: 1200px) {
+          flex: 1;
+        }
       }
       &:first-child {
-        margin-left: 0;
+        @media (min-width: 1201px) {
+          margin-left: 0;
+        }
       }
       &:last-child {
-        margin-right: 0;
+        @media (min-width: 1201px) {
+          margin-right: 0;
+        }
       }
     }
   }

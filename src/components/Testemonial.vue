@@ -30,6 +30,10 @@ div {
   font-size: 1.25rem;
   max-width: 50vw;
 
+  @media (max-width: 900px) {
+    max-width: 80vw;
+  }
+
   strong {
     font-size: 1.5rem;
     color: $text-primary;

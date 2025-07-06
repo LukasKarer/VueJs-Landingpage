@@ -36,6 +36,9 @@ div {
 
   .svg {
     max-width: 30vw;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 
   span {
@@ -44,14 +47,18 @@ div {
     justify-content: center;
     flex-direction: column;
     margin: 3rem 3rem 3rem 5vw;
+    max-width: 30vw;
+
+    @media (max-width: 1200px) {
+      margin: 3rem 0;
+      max-width: 80vw;
+    }
 
     h2 {
-      max-width: 30vw;
       font-size: 2rem;
       color: $text-primary;
     }
     p {
-      max-width: 30vw;
       font-size: 1.25rem;
       margin-top: 1rem;
       color: $text-secondary;

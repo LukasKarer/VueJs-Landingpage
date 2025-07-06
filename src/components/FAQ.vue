@@ -14,22 +14,6 @@
         </div>
         <span class="answer">{{ question.answer }}</span>
       </span>
-      <!-- <span class="question">
-        <div><IconPlus @click="onClick()" class="img" />A single simple question</div>
-        <span class="answer">A single simple answer</span>
-      </span>
-      <span class="question">
-        <IconPlus @click="onClick" class="img" />bla vla bla
-        <span class="answer">bla vla vla</span>
-      </span>
-      <span class="question">
-        <IconPlus @click="onClick" class="img" />bla vla bla
-        <span class="answer">bla vla vla</span>
-      </span>
-      <span class="question">
-        <IconPlus @click="onClick" class="img" />bla vla bla
-        <span class="answer">bla vla vla</span>
-      </span> -->
     </div>
   </div>
 </template>
@@ -83,18 +67,27 @@ div.container {
   place-items: center;
   justify-content: center;
   flex-direction: row;
-  width: calc(100vw - 2rem);
-  margin: 1rem;
+  width: calc(100vw - 4rem);
+  margin: 2rem;
   border-radius: 1rem;
   font-family: $font-family;
 
-  .svg {
-    max-width: 30vw;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 0;
   }
+
   h2 {
     max-width: 25vw;
     font-size: 2rem;
     color: $text-primary;
+    text-align: center;
+    margin-right: 1rem;
+
+    @media (max-width: 1200px) {
+      max-width: 80vw;
+      margin-bottom: 1rem;
+    }
   }
 
   div.faqblock {
@@ -107,6 +100,14 @@ div.container {
       cursor: pointer;
       padding: 1rem;
       margin-bottom: 0.5rem;
+      background-color: $bg-secondary;
+      width: 40vw;
+      font-size: 1.25rem;
+      line-height: 2rem;
+
+      @media (max-width: 1200px) {
+        width: 80vw;
+      }
 
       &:first-child {
         border-radius: 1rem 1rem 0 0;
@@ -155,10 +156,7 @@ div.container {
 }
 
 span {
-  background-color: $bg-secondary;
-  width: 40vw;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  
 }
 
 @keyframes fadeIn {
