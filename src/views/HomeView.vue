@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import { useI18n } from 'vue-i18n'
+import { onMounted } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import HeroSection from '../components/HeroSection.vue'
 import Testemonial from '../components/Testemonial.vue'
@@ -11,12 +12,17 @@ import Packages from '../components/Packages.vue'
 import FAQ from '../components/FAQ.vue'
 import ContactUs from '../components/ContactUs.vue'
 import Footer from '../components/Footer.vue'
-import { AnalyticsClient } from 'tslib-analytics-client';
+import { AnalyticsClient } from 'tslib-analytics-client'
 
-new AnalyticsClient({
-  endpoint: 'http://localhost:3000/api', // Your backend URL
-  projectId: '687074760036a83a7cb6'
-}).autoTrack();
+// Initialize analytics only in browser environment
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    new AnalyticsClient({
+      endpoint: 'https://analytics.karer.tech/api', // Your backend URL
+      projectId: '687074760036a83a7cb6'
+    }).autoTrack()
+  }
+})
 
 const { t } = useI18n()
 useHead({

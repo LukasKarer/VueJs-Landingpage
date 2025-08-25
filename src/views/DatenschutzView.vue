@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
+import { onMounted } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
-import { AnalyticsClient } from 'tslib-analytics-client';
+import { AnalyticsClient } from 'tslib-analytics-client'
 
-new AnalyticsClient({
-  endpoint: 'http://localhost:3000/api', // Your backend URL
-  projectId: '687074760036a83a7cb6'
-}).sendAnalytics({clientEndpoint: '/impressum'});
+// Initialize analytics only in browser environment
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    new AnalyticsClient({
+      endpoint: 'https://analytics.karer.tech/api', // Your backend URL
+      projectId: '687074760036a83a7cb6'
+    }).sendAnalytics({ clientEndpoint: '/impressum' })
+  }
+})
 
 useHead({
   title: 'WebKarer | Datenschutz',
