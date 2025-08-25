@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-left">
-        <span class="footer-title">WebKarer</span>
+        <router-link to="/" class="footer-title">WebKarer</router-link>
       </div>
       <div class="footer-right">
         <nav>

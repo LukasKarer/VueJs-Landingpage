@@ -10,36 +10,36 @@ const messages = {
       getStarted: 'Loslegen'
     },
     hero: {
-      title: 'Websites zum Gewinnen. Unternehmen zum Skalieren.',
+      title: 'Websites, die konvertieren. KI-Agenten, die automatisieren.',
       subtitle:
-        'Wir sind Ihr One-Stop-Shop für beste Websites, wunderschönes Markendesign und zuverlässiges Hosting. Gewinnen Sie mehr Kunden, heben Sie Ihre Marke ab und skalieren Sie Ihr Unternehmen - starten Sie jetzt!',
+        'Wir bauen nicht nur Webseiten – wir liefern KI-Automatisierung. Von leistungsstarken Websites bis zu KI-Agenten, die Leads qualifizieren, Nachrichten beantworten, Prozesse ausführen und Daten synchronisieren. Mehr Umsatz, weniger manuelle Arbeit.',
       seePackages: 'Pakete ansehen'
     },
     howItWorks: {
       title: 'Wie es funktioniert',
       subtitle:
-        'Wir sind Ihr One-Stop-Shop für hochwirksame Websites, wunderschönes Markendesign und zuverlässiges Hosting. Gewinnen Sie mehr Kunden, heben Sie Ihre Marke ab und skalieren Sie Ihr Unternehmen!',
+        'Strategie, Umsetzung, Skalierung – für Websites und KI-Automatisierung. Wir verbinden klare Nutzerführung mit Agenten, die Routinearbeit übernehmen.',
       step1: {
         title: 'Strategie-Meeting',
         description:
-          'Bei WebKarer beginnen wir unser Projekt mit einem Strategie-Meeting, bei dem die Basics des Projekts festgelegt werden, die alle wichtigen, einzigartigen Teile des Projekts entahlten, die das Endprodukt auszeichnen werden.'
+          'Ziele klären, Kernprozesse identifizieren, Datenquellen erfassen. Wir definieren, wo Website-Conversion und KI-Agenten den größten Hebel haben.'
       },
       step2: {
         title: 'Design & Entwicklung',
         description:
-          'Mit allen Basics, die für einen geradlinigen Erfolg erforderlich sind, verwenden wir alle Ihre wichtigen, einzigartigen Teile, um eine Website zu erstellen, die der hellste Stern am Himmel der Websites sein wird.'
+          'UX, Copy und Komponenten für Ihre Website – plus Aufbau Ihrer KI-Agenten (z. B. Support-, Sales- oder Operations-Agent) inkl. Integrationen.'
       },
       step3: {
         title: 'Launch',
         description:
-          'Nach einigen möglichen Überarbeitungsrunden bleibt nur noch, Ihr Endprodukt zur Startrampe zu bringen und es in eine Welt voller wartender Kunden zu schießen.'
+          'Go-Live, Monitoring und feingranulares Tuning. Wir messen Conversion, Lernfortschritt der Agenten und optimieren kontinuierlich.'
       },
       seePackages: 'Pakete ansehen'
     },
     packages: {
       title: 'Pakete',
       subtitle:
-        'Einige Beispiele für Dienstleistungen, die wir anbieten. Individuelle Anfragen immer möglich per E-Mail und Anruf!',
+        'Von Conversion-starken Websites bis zu produktionsreifen KI-Agenten. Alle Pakete sind individuell erweiterbar – sprechen wir über Ihren Use Case!',
       startingAt: 'Ab',
       eur: 'EUR',
       eurPerMonth: 'EUR/Monat',
@@ -48,29 +48,29 @@ const messages = {
         price: '500',
         features: [
           '5 hochkonvertierende Seiten',
-          'Basis-Markendesign',
-          'Website-Nutzungstraining',
-          'Post-Launch Support'
+          'Klares Messaging & Basis-Branding',
+          'Lead-Formulare & Tracking',
+          'Optional: einfacher KI-FAQ-Bot'
         ]
       },
       premium: {
         title: 'Premium',
         price: '5000',
         features: [
-          'Individuelle interaktive Webapp',
-          'Individuelles Copywriting',
-          'Vorlagen & Checklisten',
-          'Erweitertes Markendesign'
+          'Custom Webapp oder Funnel',
+          'Individuelles Copywriting & UX',
+          'API-Integrationen (CRM, E-Mail, DB)',
+          '1 produktionsreifer KI-Agent (Sales/Support)'
         ]
       },
       hosting: {
-        title: 'Hosting',
+        title: 'Betrieb & Betreuung',
         price: '50',
         features: [
           'Zuverlässiges & sicheres Hosting',
-          'Laufende Wartung',
-          'Basis-SEO-Optimierung',
-          'Analytics (in Arbeit)'
+          'Laufende Wartung & Updates',
+          'Analytics & Conversion-Tracking',
+          'Agent Monitoring & Retraining-Loop'
         ]
       },
       getStarted: 'Loslegen',
@@ -79,21 +79,22 @@ const messages = {
     contact: {
       title: 'Kontakt aufnehmen',
       subtitle:
-        'Bereit, Ihre Online-Präsenz zu transformieren? Lassen Sie uns über Ihr Projekt sprechen und gemeinsam etwas Großartiges schaffen. Schicken Sie uns eine Nachricht und wir melden uns innerhalb von 24 Stunden bei Ihnen!',
+        'Bereit für mehr Umsatz und weniger Handarbeit? Schreiben Sie uns zu Website, KI-Automatisierung oder einem konkreten Agent-Use-Case – wir melden uns innerhalb von 24 Stunden.',
       form: {
         name: 'Name oder Unternehmen',
         namePlaceholder: 'Ihr Name',
         email: 'E-Mail-Adresse',
-        emailPlaceholder: 'email@beispiel.com',
+        emailPlaceholder: '',
         phone: 'Telefonnummer (optional)',
         phonePlaceholder: '+43 660 1234567',
-        service: 'Dienstleistung',
+        service: 'Interesse',
         servicePlaceholder: 'Dienstleistung auswählen',
         services: {
           website: 'Website-Entwicklung',
           branding: 'Markendesign',
           hosting: 'Web-Hosting',
           consultation: 'Beratung',
+          aiAgents: 'KI-Agenten & Automatisierung',
           other: 'Andere'
         },
         budget: 'Budget-Bereich',
@@ -135,54 +136,54 @@ const messages = {
       questions: [
         {
           id: 1,
-          text: 'Wie lange dauert die Entwicklung einer Website?',
+          text: 'Was können Ihre KI-Agenten konkret übernehmen?',
           answer:
-            'Die Entwicklungszeit hängt von der Komplexität Ihres Projekts ab. Einfache Websites können in 4-6 Wochen fertiggestellt werden, während komplexere Projekte 8-16 Wochen benötigen können.'
+            'Lead-Qualifizierung, Terminvereinbarung, Support-Responses, Datenabgleich mit CRM/ERP, interne Prozessautomation (z. B. Bestellungen, Reporting) – immer mit klaren Regeln und Eskalationen.'
         },
         {
           id: 2,
-          text: 'Wie funktioniert der Entwicklungs-Prozess?',
+          text: 'Wie integrieren sich die Agenten in meine Systeme?',
           answer:
-            'Wir beginnen mit einem Strategie-Meeting, um Ihre Ziele zu verstehen, erstellen dann Konzepte und arbeiten eng mit Ihnen zusammen, bis Sie vollständig zufrieden sind.'
+            'Über APIs und Konnektoren (z. B. HubSpot, Pipedrive, Slack, E-Mail, Datenbanken). Wir richten sichere Verbindungen und Rollenrechte ein.'
         },
         {
           id: 3,
-          text: 'Können Sie bestehende Websites überarbeiten?',
+          text: 'Wie sieht die Timeline aus?',
           answer:
-            'Absolut! Wir können bestehende Websites überarbeiten, um deren Performance, Design und Conversion-Raten zu verbessern.'
+            'Website-Launch: 3–6 Wochen je nach Umfang. Ein produktionsreifer KI-Agent: meist 2–4 Wochen inkl. Tests und Monitoring.'
         },
         {
           id: 4,
-          text: 'Bieten Sie auch Hosting-Dienstleistungen an?',
+          text: 'Was kostet ein KI-Agent?',
           answer:
-            'Ja, wir bieten zuverlässiges und sicheres Hosting mit laufender Wartung und Basis-SEO-Optimierung an.'
+            'Das hängt von Use Case, Integrationen und Volumen ab. Einstieg häufig im mittleren vierstelligen Bereich plus geringe Laufkosten für Betrieb/Monitoring.'
         },
         {
           id: 5,
-          text: 'Bieten Sie Support nach dem Launch?',
+          text: 'Wie stellen Sie Sicherheit und Datenschutz sicher?',
           answer:
-            'Ja, alle unsere Pakete beinhalten Post-Launch Support, um sicherzustellen, dass Ihre Website optimal funktioniert.'
+            'Datensparsamkeit, Zugriff nur nach Bedarf, Protokollierung, optionale Datenmaskierung, EU-konforme Anbieter und getrennte Umgebungen (Dev/Staging/Prod).'
         }
       ]
     },
     testimonials: {
       leadMagnet: {
-        title: 'Lead Magnet aktiviert',
+        title: 'KI-Agent übernimmt Lead-Qualifizierung',
         message:
-          'Meine Website sah gut aus, aber sie brachte mir keine Kunden. WebKarer optimierte sie für Lead-Generierung, und jetzt laufe ich mit Projekten über!',
+          'Meine Website generierte Leads, aber ich verbrachte Stunden mit der Qualifizierung. Der KI-Agent übernimmt das jetzt automatisch und übergibt mir überprüfte Anfragen.',
         name: 'Peter'
       },
       growth: {
-        title: 'Wachstum auf Autopilot',
+        title: 'Support-Agent reduziert Ticket-Volumen um 70%',
         message:
-          'Dieses Team hat eine Website gebaut, die Ergebnisse liefert! Mein Unternehmen hat einen massiven Anstieg neuer Kunden erlebt.',
+          'Unser Support war überlastet mit Routine-Fragen. Der KI-Agent beantwortet jetzt 70% aller Anfragen automatisch und leitet nur komplexe Fälle weiter.',
         name: 'Thomas'
       }
     },
     problemSolving: {
-      title: 'Wir kennen den Wert Ihrer Arbeit, es ist Zeit, dass Ihre Kunden es auch tun',
+      title: 'Mehr Umsatz. Weniger Handarbeit. Website + KI-Agenten im Tandem.',
       subtitle:
-        'Sie stecken Ihr Herz und Ihre Seele in Ihr Unternehmen. Aber harte Arbeit kann Sie nur so weit bringen und eine schlechte Onlinepräsenz lässt Sie Überstunden machen, ohne Ergebnisse zu sehen. Es ist also Zeit, sich als Branchenführer abzuheben, mit einer Marke, die Ihre Kunden wirklich lieben, und einer Website, die genauso hart arbeitet wie Sie.'
+        'Ihre Website zieht an und konvertiert – Ihre Agenten übernehmen Routine. Vom ersten Kontakt bis zur Übergabe an Sales oder Fulfillment. Transparente Metriken, kontinuierliches Tuning.'
     },
     clientShowcase: {
       title: 'Kunden-Showcase',
@@ -206,36 +207,36 @@ const messages = {
       getStarted: 'Get Started'
     },
     hero: {
-      title: 'Websites Built to Win. Businesses Built to Scale.',
+      title: 'Websites that convert. AI agents that automate.',
       subtitle:
-        "We're your one-stop shop for high-impact websites, gorgeous brand design and reliable hosting. Attract more clients, elevate your brand, and scale your business - get started now!",
+        "We don't just build websites – we ship automation. From high-converting sites to AI agents that qualify leads, answer inquiries, run processes and sync data. More revenue, less manual work.",
       seePackages: 'See Packages'
     },
     howItWorks: {
       title: 'How It Works',
       subtitle:
-        "We're your one-stop shop for high-impact websites, gorgeous brand design and reliable hosting. Attract more clients, elevate your brand, and scale your business!",
+        'Strategy, build, scale – for websites and AI automation. We combine clear UX with agents that take over repetitive work.',
       step1: {
         title: 'Strategy Meeting',
         description:
-          'At WebKarer we kickoff our project with a strategy meeting, where a outline of the project will be written down, containing integral, unique parts that the endproduct will feature'
+          'Clarify goals, map key processes, inventory data sources. We define where website conversion and AI agents have the biggest leverage.'
       },
       step2: {
         title: 'Design & Development',
         description:
-          'With all outlines setup for straightup success, we use all your integral, unique parts to craft a website that will become the brigthest star in an starlit sky of websites'
+          'UX, copy and components for your site – plus building your AI agents (e.g. support, sales or ops) including integrations.'
       },
       step3: {
         title: 'Launch',
         description:
-          'After some possible rounds of revisions, the only thing left to do is to take your endproduct to the launchpad and shoot it into a world full of eagerly waiting customers'
+          'Go-live, monitoring and tight tuning. We track conversion, agent performance and iterate continuously.'
       },
       seePackages: 'See Packages'
     },
     packages: {
       title: 'Packages',
       subtitle:
-        'A few examples of services we are providing. Custom requests always possible via email and call!',
+        'From conversion-focused websites to production-grade AI agents. All packages are expandable – let’s discuss your use case!',
       startingAt: 'Starting at',
       eur: 'EUR',
       eurPerMonth: 'EUR/month',
@@ -244,29 +245,29 @@ const messages = {
         price: '500',
         features: [
           '5 high-converting pages',
-          'Basic brand design',
-          'Website usage training',
-          'Post launch support'
+          'Clear messaging & basic branding',
+          'Lead forms & tracking',
+          'Optional: simple AI FAQ bot'
         ]
       },
       premium: {
         title: 'Premium',
         price: '5000',
         features: [
-          'Custom interactive webapp',
-          'Custom copywriting',
-          'Templates & checklists',
-          'Advanced brand design'
+          'Custom webapp or funnel',
+          'Custom copywriting & UX',
+          'API integrations (CRM, email, DB)',
+          '1 production-grade AI agent (sales/support)'
         ]
       },
       hosting: {
-        title: 'Hosting',
+        title: 'Ops & Care',
         price: '50',
         features: [
           'Reliable & secure hosting',
-          'Ongoing maintenance',
-          'Basic SEO optimization',
-          'Analytics (work in progress)'
+          'Ongoing maintenance & updates',
+          'Analytics & conversion tracking',
+          'Agent monitoring & retraining loop'
         ]
       },
       getStarted: 'Get Started',
@@ -275,21 +276,22 @@ const messages = {
     contact: {
       title: 'Get In Touch',
       subtitle:
-        "Ready to transform your online presence? Let's discuss your project and create something amazing together. Drop us a message and we'll get back to you within 24 hours!",
+        "Ready for more revenue with less manual work? Message us about your website, AI automation, or a specific agent use case – we'll reply within 24 hours.",
       form: {
         name: 'Full Name or Company',
         namePlaceholder: 'Your name',
         email: 'Email Address',
-        emailPlaceholder: 'email@example.com',
+        emailPlaceholder: '',
         phone: 'Phone Number (optional)',
         phonePlaceholder: '+43 660 1234567',
-        service: 'Service Interest',
+        service: 'Interest',
         servicePlaceholder: 'Select a service',
         services: {
           website: 'Website Development',
           branding: 'Brand Design',
           hosting: 'Web Hosting',
           consultation: 'Consultation',
+          aiAgents: 'AI Agents & Automation',
           other: 'Other'
         },
         budget: 'Budget Range',
@@ -330,54 +332,54 @@ const messages = {
       questions: [
         {
           id: 1,
-          text: 'How long does it take to develop a website?',
+          text: 'What can your AI agents handle?',
           answer:
-            'Development time depends on the complexity of your project. Simple websites can be completed in 4-6 weeks, while more complex projects may take 8-16 weeks.'
+            'Lead qualification, scheduling, support responses, syncing with CRM/ERP, and internal process automation (orders, reporting) – with rules and escalation paths.'
         },
         {
           id: 2,
-          text: 'How does the development process work?',
+          text: 'How do the agents integrate with my stack?',
           answer:
-            "We start with a strategy meeting to understand your goals, then create concepts and work closely with you until you're completely satisfied."
+            'Via APIs and connectors (e.g., HubSpot, Pipedrive, Slack, email, databases). We set up secure connections and role-based access.'
         },
         {
           id: 3,
-          text: 'Can you redesign existing websites?',
+          text: 'What does the typical timeline look like?',
           answer:
-            'Absolutely! We can redesign existing websites to improve their performance, design, and conversion rates.'
+            'Site launch: 3–6 weeks depending on scope. One production-grade AI agent: usually 2–4 weeks including testing and monitoring.'
         },
         {
           id: 4,
-          text: 'Do you also offer hosting services?',
+          text: 'How much does an AI agent cost?',
           answer:
-            'Yes, we offer reliable and secure hosting with ongoing maintenance and basic SEO optimization.'
+            'Depends on use case, integrations and volume. Many engagements start in the mid four-figure range plus low ongoing ops/monitoring costs.'
         },
         {
           id: 5,
-          text: 'Do you offer support after launch?',
+          text: 'How do you ensure security and privacy?',
           answer:
-            'Yes, all our packages include post-launch support to ensure your website functions optimally.'
+            'Data minimization, least-privilege access, auditing, optional data masking, EU-compliant providers and separate environments (dev/staging/prod).'
         }
       ]
     },
     testimonials: {
       leadMagnet: {
-        title: 'Lead Magnet Activated',
+        title: 'AI Agent Takes Over Lead Qualification',
         message:
-          "My website was pretty, but it wasn't converting visitors. WebKarer optimized it for lead capture, and now my sales funnel is overflowing!",
+          'My website generated leads, but I spent hours qualifying them. The AI agent now handles this automatically and only hands me qualified contacts.',
         name: 'Peter'
       },
       growth: {
-        title: 'Growth on Autopilot',
+        title: 'Support Agent Reduces Ticket Volume by 70%',
         message:
-          'This team built a website that gets results! My business has seen a surge in new customers.',
+          'Our support was overwhelmed with routine questions. The AI agent now answers 70% of all inquiries automatically and only escalates complex cases.',
         name: 'Thomas'
       }
     },
     problemSolving: {
-      title: "We know the value of your work, it's time your customers do so too",
+      title: 'More revenue. Less manual work. Website + AI agents, together.',
       subtitle:
-        "You put your heart and soul into your business. But hard work can only get you so far and a poor brand presence will have you working overtime and not seeing results. So it's time to set yourself apart as the industry leader with a kick-ass brand your customers genuinely love and a website that works as hard as you do."
+        'Your website attracts and converts – your agents take over the routine. From first touch to handoff to sales or fulfillment. Transparent metrics and continuous tuning.'
     },
     clientShowcase: {
       title: 'Client Showcase',
@@ -402,10 +404,12 @@ const getInitialLocale = () => {
   return import.meta.env.VITE_DEFAULT_LOCALE || 'en'
 }
 
-export default createI18n({
-  locale: getInitialLocale(),
-  fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE || 'en',
-  legacy: false,
-  globalInjection: true,
-  messages
-})
+export function createI18nInstance(locale?: string) {
+  return createI18n({
+    locale: locale || getInitialLocale(),
+    fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE || 'en',
+    legacy: false,
+    globalInjection: true,
+    messages
+  })
+}

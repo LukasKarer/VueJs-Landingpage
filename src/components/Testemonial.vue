@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Testemonial',
   props: {
     title: String,

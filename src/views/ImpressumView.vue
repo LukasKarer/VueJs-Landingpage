@@ -1,6 +1,26 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import { AnalyticsClient } from 'tslib-analytics-client'
+
+new AnalyticsClient({
+  endpoint: 'http://localhost:3000/api', // Your backend URL
+  projectId: '687074760036a83a7cb6'
+}).sendAnalytics({ clientEndpoint: '/impressum' })
+
+useHead({
+  title: 'WebKarer | Impressum',
+  meta: [
+    { name: 'description', content: 'Impressum und rechtliche Informationen zu WebKarer.' },
+    { property: 'og:title', content: 'WebKarer | Impressum' },
+    { property: 'og:description', content: 'Impressum und rechtliche Informationen zu WebKarer.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://www.karer.tech/impressum' },
+    { property: 'og:locale', content: 'de_DE' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ]
+})
 </script>
 
 <template>
@@ -13,7 +33,9 @@ import Footer from '../components/Footer.vue'
           <strong>
             Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB
             <br />‍<br />
-            Webseitenbetreiber:</strong>Lukas Karer<br />
+            Webseitenbetreiber:</strong
+          >
+          Lukas Karer<br />
           ‍<strong>Anschrift:</strong> Blümelhuberstraße 9, 4493 Wolfern<br />‍<br />
           <strong>Gewerbeaufsichtbehörde:</strong>
           Bezirkshauptmannschaft Steyr-Land <br />‍<br /><strong>Kontaktdaten:</strong>

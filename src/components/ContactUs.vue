@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
     <span>
@@ -20,13 +21,7 @@
         </div>
         <div class="form-group">
           <label for="email">{{ $t('contact.form.email') }}</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            :placeholder="$t('contact.form.emailPlaceholder')"
-            required
-          />
+          <input type="email" id="email" name="email" placeholder="email@example.com" required />
         </div>
         <div class="form-group">
           <label for="phone">{{ $t('contact.form.phone') }}</label>
@@ -46,6 +41,7 @@
             <option value="Website">{{ $t('contact.form.services.website') }}</option>
             <option value="Branding">{{ $t('contact.form.services.branding') }}</option>
             <option value="Hosting">{{ $t('contact.form.services.hosting') }}</option>
+            <option value="AI Agents">{{ $t('contact.form.services.aiAgents') }}</option>
             <option value="Consultation">{{ $t('contact.form.services.consultation') }}</option>
             <option value="Other">{{ $t('contact.form.services.other') }}</option>
           </select>
@@ -54,11 +50,11 @@
           <label for="budget">{{ $t('contact.form.budget') }}</label>
           <select id="budget" name="budget">
             <option value="">{{ $t('contact.form.budgetPlaceholder') }}</option>
-            <option value="under-1000">{{ $t('contact.form.budgets.under1000') }}</option>
+            <option value="under-1000">{{ $t("contact.form.budgets['under1000']") }}</option>
             <option value="1000-3000">{{ $t("contact.form.budgets['1000-3000']") }}</option>
             <option value="3000-5000">{{ $t("contact.form.budgets['3000-5000']") }}</option>
             <option value="5000-10000">{{ $t("contact.form.budgets['5000-10000']") }}</option>
-            <option value="over-10000">{{ $t('contact.form.budgets.over10000') }}</option>
+            <option value="over-10000">{{ $t("contact.form.budgets['over10000']") }}</option>
           </select>
         </div>
       </div>
@@ -83,7 +79,7 @@
 
 <script>
 export default {
-  name: 'Contact',
+  name: 'ContactUs',
   data() {
     return {
       formData: {

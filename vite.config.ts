@@ -14,7 +14,7 @@ export default defineConfig({
     VueDevTools(),
     svgLoader(),
     VueI18nPlugin({
-      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'), // provide a path to the folder where you'll store translation data (see below)
+      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**') // provide a path to the folder where you'll store translation data (see below)
     })
   ],
   resolve: {
@@ -24,9 +24,18 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-        scss: {
-            additionalData: `@import "@/assets/scss/global.scss";`,
-        },
-    },
+      scss: {
+        additionalData: `@use "@/assets/scss/global.scss" as *;`
+      }
+    }
   },
+  build: {
+    outDir: 'dist'
+  },
+  optimizeDeps: {
+    include: ['vue-i18n']
+  },
+  ssr: {
+    noExternal: ['vue-i18n']
+  }
 })

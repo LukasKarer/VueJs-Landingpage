@@ -1,12 +1,18 @@
 //import './assets/main.css'
 
-import { createApp } from 'vue'
+import { createApp as createVueApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import i18n from "./i18n"
+import { ViteSSG } from 'vite-ssg'
+import { createHead } from '@vueuse/head'
+import { createRouterInstance, routes } from './router'
+import { createI18nInstance } from './i18n'
 
-const app = createApp(App)
-
-app.use(router).use(i18n)
-
-app.mount('#app')
+export const createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  ({ app, router, routes, isClient, initialState }) => {
+    app.use(router)
+    app.use(createI18nInstance())
+    app.use(createHead())
+  }
+)

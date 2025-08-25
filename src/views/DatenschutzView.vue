@@ -1,6 +1,32 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import { AnalyticsClient } from 'tslib-analytics-client';
+
+new AnalyticsClient({
+  endpoint: 'http://localhost:3000/api', // Your backend URL
+  projectId: '687074760036a83a7cb6'
+}).sendAnalytics({clientEndpoint: '/impressum'});
+
+useHead({
+  title: 'WebKarer | Datenschutz',
+  meta: [
+    {
+      name: 'description',
+      content: 'Datenschutzerklärung und Hinweise zum Datenschutz bei WebKarer.'
+    },
+    { property: 'og:title', content: 'WebKarer | Datenschutz' },
+    {
+      property: 'og:description',
+      content: 'Datenschutzerklärung und Hinweise zum Datenschutz bei WebKarer.'
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://www.karer.tech/datenschutz' },
+    { property: 'og:locale', content: 'de_DE' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ]
+})
 </script>
 
 <template>

@@ -91,6 +91,7 @@ const handleClick = async (event: Event, targetId: string) => {
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:color';
 .mobile-nav-bg {
   display: block;
   position: fixed;
@@ -286,7 +287,7 @@ const handleClick = async (event: Event, targetId: string) => {
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: darken($color-primary, 10%);
+    background-color: color.adjust($color-primary, $lightness: -10%);
   }
 }
 </style>
